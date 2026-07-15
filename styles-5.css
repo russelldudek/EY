@@ -1,0 +1,13 @@
+.resume-page .doc-section { margin-bottom: .16in; }
+.resume-page .doc-section h2 { font-size: 10.8pt; }
+.cover-page .doc-section p { font-size: 10.25pt; line-height: 1.47; margin: .105in 0; }
+.cover-page .doc-section { margin-bottom: .12in; }
+.cover-page .doc-footer { font-size: 7.4pt; }
+@media screen and (max-width: 840px) {
+  .document-shell { padding: .5rem 0 2rem; }
+  .document-page { width: 100%; min-height: auto; margin: 0 0 .5rem; padding: 1rem; box-shadow: none; }
+  .doc-header { grid-template-columns: 1fr 62px; }
+  .doc-name { font-size: 20pt; }
+  .doc-grid-2, .doc-grid-3, .report-hero, .mini-timeline { grid-template-columns: 1fr; }
+  .matrix-row { grid-template-columns: 1fr; }
+}
