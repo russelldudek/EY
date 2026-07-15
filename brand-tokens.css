@@ -1,0 +1,11 @@
+:root {
+  --ey-yellow: #ffe600; /* official: EY inline logo/CSS */
+  --ey-dark: #2e2e38;   /* source-sampled: official careers lockup */
+  --ey-ink: #15151c;    /* source-sampled dark editorial neutral */
+  --ey-gray: #747480;   /* source-sampled supporting neutral */
+  --ey-mist: #f3f3f6;   /* source-derived light surface */
+  --paper: #ffffff;
+  --sensor-teal: #35b7ad; /* candidate-original, subordinate role accent */
+  --warning-amber: #d98700; /* candidate-original, review-state accent */
+  --danger-red: #bb3e3e; /* candidate-original, hold-state accent */
+}
