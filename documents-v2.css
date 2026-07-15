@@ -1,0 +1,114 @@
+:root {
+  --ey-yellow:#ffe600;
+  --ey-ink:#202027;
+  --ey-dark:#2e2e38;
+  --ey-gray:#60606b;
+  --ey-mist:#f3f3f5;
+  --ey-rule:#cfcfd5;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body.document-body{background:#d9d9df;color:var(--ey-ink);font-family:"DejaVu Sans Condensed","Arial Narrow",Arial,sans-serif;line-height:1.28}
+a{color:inherit}
+.document-actions{position:sticky;top:0;z-index:20;display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap;padding:.72rem;background:var(--ey-ink);color:#fff}
+.document-actions a,.document-actions button{font:700 .85rem/1 inherit;color:#fff;text-decoration:none;background:transparent;border:1px solid rgba(255,255,255,.38);padding:.55rem .78rem;cursor:pointer}
+.document-shell{padding:1.5rem 0 3rem}
+.document-page{width:8.5in;height:11in;margin:0 auto 1.25rem;background:#fff;padding:.42in .48in .38in;box-shadow:0 16px 50px rgba(0,0,0,.18);display:flex;flex-direction:column;overflow:hidden;page-break-after:always;position:relative}
+.document-page:last-child{page-break-after:auto}
+.doc-header{display:grid;grid-template-columns:1fr auto;gap:.2in;align-items:start;border-bottom:4px solid var(--ey-yellow);padding-bottom:.12in;margin-bottom:.12in}
+.doc-name{font-size:24pt;line-height:.92;font-weight:900;letter-spacing:-.035em}
+.doc-identity{font-size:9.6pt;font-weight:800;color:var(--ey-gray);margin-top:.055in}
+.doc-contact{font-size:7.45pt;line-height:1.32;margin-top:.06in;overflow-wrap:anywhere}
+.company-id{min-width:.92in;text-align:right;font-weight:900;font-size:15pt;line-height:1;color:var(--ey-dark);padding-top:.02in}
+.company-id span{display:block;font-size:6.5pt;letter-spacing:.11em;text-transform:uppercase;color:var(--ey-gray);margin-top:.06in}
+.doc-kicker{font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--ey-gray)}
+.section-title{font-size:8.8pt;text-transform:uppercase;letter-spacing:.105em;font-weight:900;margin:0 0 .055in;padding-bottom:.035in;border-bottom:1.4px solid var(--ey-dark)}
+.summary-band{display:grid;grid-template-columns:1.45fr .75fr;gap:.16in;background:var(--ey-mist);border-left:5px solid var(--ey-yellow);padding:.115in .14in;margin:.02in 0 .12in}
+.summary-band p{font-size:8.7pt;line-height:1.3;margin:0}
+.summary-proof{display:grid;gap:.045in;border-left:1px solid var(--ey-rule);padding-left:.13in}
+.summary-proof strong{font-size:8.3pt}
+.summary-proof span{font-size:7.25pt;color:var(--ey-gray)}
+.resume-grid{display:grid;grid-template-columns:1.82in 1fr;gap:.18in;min-height:0;flex:1}
+.resume-sidebar{border-right:1px solid var(--ey-rule);padding-right:.15in}
+.resume-main{min-width:0}
+.sidebar-section{margin-bottom:.12in;break-inside:avoid}
+.sidebar-section p,.sidebar-section li{font-size:7.65pt;line-height:1.27}
+.sidebar-section ul{margin:.035in 0 0;padding-left:.15in}
+.sidebar-section li{margin:.026in 0}
+.capability-list{display:grid;grid-template-columns:1fr;gap:.035in}
+.capability-list span{display:block;border-bottom:1px solid var(--ey-rule);padding:.035in 0;font-size:7.65pt;font-weight:700}
+.role{margin-bottom:.095in;break-inside:avoid}
+.role-head{display:grid;grid-template-columns:1fr auto;gap:.1in;align-items:baseline;margin-bottom:.022in}
+.role-head h3{font-size:9.25pt;line-height:1.12;margin:0;font-weight:900}
+.role-head time{font-size:7.2pt;color:var(--ey-gray);white-space:nowrap}
+.role p{font-size:7.75pt;margin:.018in 0 .03in;color:#34343d}
+.role ul{margin:.02in 0 0;padding-left:.155in}
+.role li{font-size:7.58pt;line-height:1.24;margin:.022in 0}
+.transfer-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:.08in;margin-top:.07in}
+.transfer-card{background:var(--ey-dark);color:#fff;padding:.085in .095in;border-top:4px solid var(--ey-yellow);min-height:.72in}
+.transfer-card:nth-child(2){border-color:#8f8f9a}.transfer-card:nth-child(3){border-color:#fff;border-left:1px solid #b8b8c0}
+.transfer-card strong{display:block;font-size:7.35pt;margin-bottom:.02in}
+.transfer-card span{display:block;font-size:6.6pt;line-height:1.22;color:#d9d9df}
+.compact-card{background:var(--ey-mist);padding:.1in .12in;margin-bottom:.1in;break-inside:avoid}
+.compact-card h3{font-size:8.5pt;margin:0 0 .04in}
+.compact-card p,.compact-card li{font-size:7.55pt;line-height:1.25}
+.compact-card ul{margin:.03in 0 0;padding-left:.15in}
+.toolkit{display:flex;flex-wrap:wrap;gap:.035in}
+.toolkit span{font-size:7.1pt;border:1px solid #c8c8ce;padding:.025in .045in;background:#fff}
+.role-proposition{border-top:4px solid var(--ey-yellow);padding-top:.08in;display:grid;grid-template-columns:.85fr 1.15fr;gap:.16in;align-items:start;margin-top:.085in}
+.role-proposition strong{font-size:12pt;line-height:1.05}
+.role-proposition p{font-size:7.75pt;margin:0;line-height:1.28}
+.doc-footer{margin-top:.1in;padding-top:.055in;border-top:1px solid var(--ey-rule);display:flex;justify-content:space-between;gap:1rem;font-size:6.8pt;color:var(--ey-gray)}
+.cover-page{padding:.43in .52in .4in}
+.cover-opening{display:grid;grid-template-columns:1.38fr .62fr;gap:.18in;align-items:end;margin:.015in 0 .12in}
+.cover-opening h1{font-size:22.5pt;line-height:.96;letter-spacing:-.035em;margin:.03in 0 0}
+.cover-thesis{background:var(--ey-yellow);padding:.11in .13in;font-size:8.6pt;line-height:1.26;font-weight:800}
+.letter-meta{display:flex;justify-content:space-between;gap:.2in;font-size:7.5pt;color:var(--ey-gray);margin-bottom:.11in}
+.letter-body{font-family:"DejaVu Sans",Arial,sans-serif;font-size:9pt;line-height:1.42;color:#303039}
+.letter-body p{margin:0 0 .095in}
+.letter-body p:first-of-type{font-size:9.35pt}
+.evidence-ribbon{display:grid;grid-template-columns:repeat(3,1fr);gap:.07in;margin:.025in 0 .11in}
+.evidence-ribbon article{background:var(--ey-mist);border-top:4px solid var(--ey-dark);padding:.085in .095in;min-height:.72in}
+.evidence-ribbon article:nth-child(2){border-color:var(--ey-yellow)}
+.evidence-ribbon article:nth-child(3){border-color:#72727c}
+.evidence-ribbon strong{display:block;font-size:7.75pt;margin-bottom:.025in}
+.evidence-ribbon span{font-size:6.95pt;line-height:1.22;color:var(--ey-gray)}
+.signature-block{display:grid;grid-template-columns:1fr auto;gap:.18in;align-items:end;margin-top:.02in}
+.signature-name{font-size:13pt;font-weight:900;line-height:1}
+.signature-note{font-size:7.2pt;color:var(--ey-gray);text-align:right;max-width:2.25in}
+.cover-footer{margin-top:auto;padding-top:.065in;border-top:1px solid var(--ey-rule);display:grid;grid-template-columns:1fr auto;gap:.15in;align-items:end;font-size:6.8pt;color:var(--ey-gray)}
+.evidence-matrix-section{margin-top:.03in;break-inside:avoid}
+.evidence-matrix{border-top:4px solid var(--ey-yellow)}
+.evidence-matrix-row{display:grid;grid-template-columns:1.02fr 1.58fr 1.35fr;gap:.08in;padding:.055in .04in;border-bottom:1px solid var(--ey-rule);align-items:start}
+.evidence-matrix-row strong,.evidence-matrix-row span{font-size:7.15pt;line-height:1.21}
+.evidence-matrix-row strong{font-weight:900}
+.evidence-matrix-head{background:var(--ey-dark);color:#fff;padding:.045in .04in}
+.evidence-matrix-head strong{font-size:6.8pt;text-transform:uppercase;letter-spacing:.08em}
+.digital-twin-banner{display:grid;grid-template-columns:.92fr 1.08fr;gap:.18in;background:var(--ey-dark);color:#fff;border-top:5px solid var(--ey-yellow);padding:.105in .13in;margin-bottom:.105in;align-items:start}
+.digital-twin-banner h2{font-size:13.2pt;line-height:1.02;margin:.025in 0 0}
+.digital-twin-banner p{font-size:7.65pt;line-height:1.28;margin:0;color:#dedee4}
+.page2-columns{display:grid;grid-template-columns:1.1fr .95fr .95fr;gap:.12in;align-items:start;margin-bottom:.1in}
+.page2-columns .compact-card{padding:.075in .085in;margin-bottom:.075in}
+.page2-columns .compact-card h3{font-size:7.8pt}
+.page2-columns .compact-card p,.page2-columns .compact-card li{font-size:6.95pt;line-height:1.22}
+.page2-columns .role h3{font-size:7.85pt}
+.page2-columns .role li{font-size:6.9pt;line-height:1.2}
+.page2-columns .section-title{font-size:7.55pt;margin-bottom:.04in}
+.page2-columns .toolkit span{font-size:6.45pt;padding:.018in .035in}
+.page2-columns .toolkit{gap:.025in}
+@media(max-width:760px){
+ .document-shell{padding:.5rem 0 2rem}.document-page{width:100%;height:auto;min-height:0;margin:0 0 .6rem;padding:1rem;box-shadow:none;overflow:visible}
+ .resume-grid,.summary-band,.cover-opening,.evidence-ribbon,.role-proposition,.digital-twin-banner,.page2-columns{grid-template-columns:1fr}
+ .resume-sidebar{border-right:0;border-bottom:1px solid var(--ey-rule);padding-right:0;padding-bottom:.1in}
+ .company-id{display:none}.doc-header{grid-template-columns:1fr}.letter-meta{flex-direction:column;gap:.03in}.signature-block{grid-template-columns:1fr}.signature-note{text-align:left}
+}
+@media print{
+ @page{size:Letter;margin:0}
+ html,body{background:#fff}
+ .document-actions{display:none!important}
+ .document-shell{padding:0}
+ .document-page{width:8.5in;height:11in;min-height:11in;margin:0;padding:.42in .48in .38in;box-shadow:none;overflow:hidden;page-break-after:always}
+ .cover-page{padding:.43in .52in .4in}
+ .document-page:last-child{page-break-after:auto}
+ a{text-decoration:none}
+}
