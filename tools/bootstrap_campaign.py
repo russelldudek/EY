@@ -3,8 +3,16 @@ import base64, io, zipfile, shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 PARTS = ROOT / "tools" / "source_payload"
-payload = "".join(path.read_text() for path in sorted(PARTS.glob("part*.txt")))
-with zipfile.ZipFile(io.BytesIO(base64.b64decode(payload))) as archive:
+expected = [PARTS / f"part{i:02}.txt" for i in range(11)]
+missing = [path.name for path in expected if not path.exists()]
+if missing:
+    raise FileNotFoundError(f"Missing campaign payload parts: {', '.join(missing)}")
+payload = "".join(path.read_text().strip() for path in expected)
+data = base64.b64decode(payload, validate=True)
+with zipfile.ZipFile(io.BytesIO(data)) as archive:
+    damaged = archive.testzip()
+    if damaged:
+        raise RuntimeError(f"Campaign payload failed ZIP integrity at {damaged}")
     archive.extractall(ROOT)
 for path in [
     PARTS,
@@ -19,4 +27,4 @@ for path in [
             path.unlink()
         except FileNotFoundError:
             pass
-print("Installed EY campaign source")
+print("Installed complete EY candidate campaign source")
