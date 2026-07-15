@@ -1,0 +1,1 @@
+Open the publication pull request and let the installer materialize the complete campaign.
