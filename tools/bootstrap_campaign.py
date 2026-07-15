@@ -19,6 +19,15 @@ for path in [
     ROOT / "tools" / "payload",
     Path(__file__),
     ROOT / ".github" / "workflows" / "bootstrap-campaign.yml",
+    ROOT / "publish-trigger.txt",
+    ROOT / "publication-note.md",
+    ROOT / ".publication-ready",
+    ROOT / "publication-trigger.json",
+    ROOT / "publication-context.txt",
+    ROOT / "publication-sequence.txt",
+    ROOT / "pr-ready.txt",
+    ROOT / "final-trigger.txt",
+    ROOT / "open-pr-now.txt",
 ]:
     if path.is_dir():
         shutil.rmtree(path)
