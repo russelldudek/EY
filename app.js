@@ -51,13 +51,18 @@
     }
   };
 
-  const stack = document.querySelector('.reality-stack');
+  const dossier = document.querySelector('.twin-dossier');
   const board = document.querySelector('.case-board');
   const buttons = [...document.querySelectorAll('.scenario-button')];
   const reset = document.querySelector('.reset-button');
+
   function applyScenario(key) {
     const s = scenarios[key] || scenarios.baseline;
-    if (stack) stack.dataset.state = s.state;
+    if (dossier) {
+      dossier.dataset.state = s.state;
+      const headNote = dossier.querySelector('.dossier-head small');
+      if (headNote) headNote.textContent = s.label;
+    }
     document.querySelectorAll('[data-scenario-label]').forEach(el => el.textContent = s.label);
     document.querySelectorAll('[data-case-status]').forEach(el => el.textContent = s.status);
     document.querySelectorAll('[data-disposition]').forEach(el => el.textContent = s.disposition);
@@ -65,11 +70,13 @@
     document.querySelectorAll('.evidence-row').forEach((row, i) => {
       row.style.setProperty('--level', s.levels[i]);
       row.dataset.risk = s.risks[i];
-      const out = row.querySelector('output'); if(out) out.textContent = s.notes[i];
+      const out = row.querySelector('output');
+      if(out) out.textContent = s.notes[i];
     });
     buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.scenario === key)));
     if (board) board.setAttribute('aria-label', `Reality Transfer Case. ${s.label}. Decision: ${s.disposition}.`);
   }
+
   buttons.forEach(b => b.addEventListener('click', () => applyScenario(b.dataset.scenario)));
   if (reset) reset.addEventListener('click', () => applyScenario('baseline'));
   applyScenario('baseline');
