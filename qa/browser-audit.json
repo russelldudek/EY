@@ -1,0 +1,16 @@
+{
+  "retained_run": true,
+  "run_scope": "Local Chromium source-render audit performed before final semantic heading and image optimization changes.",
+  "fresh_rerun_limitation": "A fresh Chromium launch after the final non-layout changes was blocked by the execution environment; no new browser pass is claimed.",
+  "routes": ["90-day-plan.html", "cover-letter.html", "executive-questions.html", "index.html", "interview-brief.html", "reality-transfer-review.html", "resume.html"],
+  "viewports": ["desktop", "laptop", "mobile", "tablet"],
+  "checks": 28,
+  "http_200": 28,
+  "horizontal_overflow_findings": 0,
+  "broken_images": 0,
+  "console_errors": 0,
+  "scenario_interaction_and_reset": true,
+  "reduced_motion": true,
+  "broken_local_links": [],
+  "conclusion": "Retained audit passed 28 route/viewport renders, scenario interaction and reset, reduced motion, images, local links, horizontal overflow and console-error checks. No fresh browser pass is claimed after the final non-layout source changes."
+}

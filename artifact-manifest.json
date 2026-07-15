@@ -1,0 +1,11 @@
+{
+  "company": "EY",
+  "canonical_role": "Physical AI Engineering Consultant - Manager - Consulting - Open Location",
+  "job_posting": "https://careers.ey.com/ey/job/New-York-Physical-AI-Engineering-Consultant-Manager-Consulting-Open-Location-NY-10001-8604/1407252133/",
+  "live_site_target": "https://russelldudek.github.io/EY/",
+  "html_routes": ["index.html", "resume.html", "cover-letter.html", "interview-brief.html", "90-day-plan.html", "reality-transfer-review.html", "executive-questions.html"],
+  "pdf_files": ["docs/Russell-Dudek-EY-Resume.pdf", "docs/Russell-Dudek-EY-Cover-Letter.pdf", "docs/Russell-Dudek-EY-Interview-Brief.pdf", "docs/Russell-Dudek-EY-90-Day-Plan.pdf", "docs/Russell-Dudek-EY-Reality-Transfer-Review.pdf", "docs/Russell-Dudek-EY-Executive-Questions.pdf"],
+  "brand_assets": ["assets/brand/ey-careers-lockup-source.svg", "assets/brand/ey-logo-crop.svg"],
+  "document_page_counts": {"Russell-Dudek-EY-Resume.pdf": 2, "Russell-Dudek-EY-Cover-Letter.pdf": 1, "Russell-Dudek-EY-Interview-Brief.pdf": 4, "Russell-Dudek-EY-90-Day-Plan.pdf": 4, "Russell-Dudek-EY-Reality-Transfer-Review.pdf": 2, "Russell-Dudek-EY-Executive-Questions.pdf": 2},
+  "state": "building_pending_live_deployment_verification"
+}
